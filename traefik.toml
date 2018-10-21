@@ -5,11 +5,11 @@ defaultEntryPoints = ["https","http"]
 
 [entryPoints]
   [entryPoints.http]
-  address = ":80"
+    address = ":80"
     [entryPoints.http.redirect]
-    entryPoint = "https"
+      entryPoint = "https"
   [entryPoints.https]
-  address = ":443"
+    address = ":443"
   [entryPoints.https.tls]
     [[entryPoints.https.tls.certificates]]
       certFile = "/certs/traefik.crt"
