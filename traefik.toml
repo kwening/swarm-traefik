@@ -14,14 +14,15 @@ defaultEntryPoints = ["https","http"]
     [[entryPoints.https.tls.certificates]]
       certFile = "/certs/traefik.crt"
       keyFile = "/certs/traefik.key"
-#  [entryPoints.eightzero]
-#  address = ":8080"
+  [entryPoints.traefik-dashboard]
+    address = ":8080"
 
-#[api]
-#entrypoint = "eightzero"
+[api]
+dashboard = true
+entryPoint = "traefik-dashboard"
 
-[web]
-#entrypoint = "eightzero"
+#[web]
+#entryPoint = "traefik-dashboard"
 
 #[retry]
 
