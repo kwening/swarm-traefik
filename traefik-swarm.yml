@@ -11,8 +11,8 @@ services:
       - traefik-net
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/klaus/Development/workspace/traefik/traefik.toml:/traefik.toml
-      - /home/klaus/Development/workspace/traefik/certs/:/certs/
+      - ./traefik.toml:/traefik.toml
+      - ./certs/:/certs/
     deploy:
       labels:
         - "traefik.port=8080"
