@@ -16,7 +16,8 @@ services:
     deploy:
       labels:
         - "traefik.port=8080"
-        - "traefik.frontend.rule=Host:dashboard.mytraefik.de"
+        - "traefik.frontend.rule=Host:mytraefik.de"
+        - "traefik.frontend.rule=Path:/dashboard"
         - "traefik.backend=traefik-dashboard"
 
 networks:

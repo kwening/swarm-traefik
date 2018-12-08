@@ -9,8 +9,11 @@ services:
     deploy:
       labels:
         traefik.port: 80
-        traefik.frontend.rule: "Host:whoami1.mytraefik.de"
-
+        traefik.frontend.rule: "Host:${SERVICE_URL}"
+        #    env_file: 
+        #      - "whoami.default.env"
+    environment:
+     - SERVICE_URL=${SERVICE_URL}
 networks:
   traefik-net:
     external: true
